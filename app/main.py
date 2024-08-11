@@ -2,14 +2,14 @@ import json
 import decimal
 
 
-def calculate_profit(file_name: str):
+def calculate_profit(file_name: str) -> None:
 
     with open(file_name, "r") as file:
         data = json.load(file)
 
-    money_spent = decimal.Decimal('0.0')
-    money_earned = decimal.Decimal('0.0')
-    crypto = decimal.Decimal('0.0')
+    money_spent = decimal.Decimal("0.0")
+    money_earned = decimal.Decimal("0.0")
+    crypto = decimal.Decimal("0.0")
 
     for trade in data:
         if trade["bought"]:
